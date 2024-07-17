@@ -29,12 +29,15 @@ def is_right_guess(guess, num1, num2):
 #To start a new game
 def higher_lower():
   print(logo)
-  print("Welcome to Higher or Lower game!! Have Fun!")
+  print("Welcome to Higher or Lower game!! Have Fun! \n\n")
   score = 0
   obj_1 = new_object(list_data = data)
   obj_2 = new_object(list_data = data)
   is_continue = True
   while (is_continue):
+    while (obj_1 == obj_2):
+      obj_2 = new_object(list_data = data)
+    print("WHO have more follower ?? Let give a guess! \n")
     print(f"Name: {obj_1['name']}, is {obj_1['description']} from {obj_1['country']}")
     print(f"Follower of {obj_1['name']} is {obj_1['follower_count']}")
     print(vs)
